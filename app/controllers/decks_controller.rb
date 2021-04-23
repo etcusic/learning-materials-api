@@ -1,8 +1,8 @@
 class DecksController < ApplicationController
 
     def index
-        @decks = Deck.all
-        render json: @decks.map{ |deck| deck.with_cards }
+        @decks = Deck.all.map{ |deck| deck.with_cards }
+        render json: @decks
     end
 
 end
