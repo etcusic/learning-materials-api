@@ -1,6 +1,6 @@
 class Deck < ApplicationRecord
     has_many :cards
-    # validates :name, presence: true
+    validates :name, presence: true
 
     # move to serializer
     def with_cards

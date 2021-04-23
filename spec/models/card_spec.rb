@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# rspec ./spec/models/card_spec.rb
+
 RSpec.describe Card, :type => :model do
   it "is valid with valid attributes"
   it "is not valid without a title"
