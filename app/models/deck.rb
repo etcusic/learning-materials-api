@@ -10,7 +10,7 @@ class Deck < ApplicationRecord
             level: self.level,
             cards: []
         }
-        self.cards.each{ |card| @deck[:cards] << CardSerializer.new(card).to_serialized_json }
+        self.cards.each{ |card| @deck[:cards] << {id: card.id, side_a: card.side_a, side_b: card.side_b} }
         @deck
     end
 

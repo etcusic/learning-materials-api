@@ -1,6 +1,9 @@
 # rails g resource Deck name:string level:integer
 # rails g resource Card deck:belongs_to side_a:string side_b:string
 
+# Card.delete_all
+# Deck.delete_all
+
 ANIMALS_AND_BUGS = [
     [ "beak", "pico" ],
 	[ "bee", "la abeja" ],
@@ -231,10 +234,10 @@ COMMON_AR_VERBS = [
 	[ "to telephone", "telefonear" ]
 ]
 
-# Deck :name || Card :side_a, :side_b, :set_id
+# Deck :name, :level || Card :side_a, :side_b, :set_id
 
 def make_set (deck_name, array)
-    deck = Deck.create(name: deck_name)
+    deck = Deck.create(name: deck_name, level: 1)
     array.each do |arr|
         deck.cards.build({side_a: arr[0], side_b: arr[1]}).save
     end
