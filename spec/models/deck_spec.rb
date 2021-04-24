@@ -11,5 +11,5 @@ RSpec.describe Deck, :type => :model do
     it "is not valid without a name" do
         deck = Deck.new(name: nil)
         expect(deck).to_not be_valid
-      end
+    end
 end
