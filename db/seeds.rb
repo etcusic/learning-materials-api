@@ -1,8 +1,8 @@
 # rails g resource Deck name:string level:integer
 # rails g resource Card deck:belongs_to side_a:string side_b:string
 
-# Card.delete_all
-# Deck.delete_all
+Card.delete_all
+Deck.delete_all
 
 ANIMALS_AND_BUGS = [
     [ "beak", "pico" ],
