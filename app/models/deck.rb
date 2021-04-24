@@ -1,16 +1,17 @@
 class Deck < ApplicationRecord
     has_many :cards
     validates :name, presence: true
-    
+
     # move to serializer
     def with_cards
-        deck = {
+        @deck = {
             id: self.id,
             name: self.name,
+            level: self.level,
             cards: []
         }
-        self.cards.each{ |card| deck[:cards] << {side_a: card.side_a, side_b: card.side_b} }
-        deck
+        self.cards.each{ |card| @deck[:cards] << CardSerializer.new(card) }
+        @deck
     end
 
 end
