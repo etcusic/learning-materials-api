@@ -61,9 +61,7 @@ DESCRIBING_PEOPLE = [
 	[ "lazy", "perezoso" ],
 	[ "loving", "cariñoso" ],
 	[ "intolerable", "insoportable" ],
-	[ "greedy", "avaro" ],
-	[ "greedy", "codicioso" ],
-	[ "greedy", "ávido" ]
+	[ "greedy", "avaro" ]
 ]
 
 AROUND_THE_HOUSE = [
