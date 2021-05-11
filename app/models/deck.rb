@@ -9,7 +9,7 @@ class Deck < ApplicationRecord
             level: self.level,
             cards: []
         }
-        self.cards.each{ |card| @deck[:cards] << {id: card.id, side_a: card.side_a, side_b: card.side_b} }
+        self.cards.each{ |card| @deck[:cards] << {id: card.id, english: card.english, spanish: card.spanish} }
         @deck
     end
 
